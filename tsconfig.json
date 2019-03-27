@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@page/*": ["src/components/pages/*"],
+      "@partial/*": ["src/components/partials/*"],
+      "@module/*": ["src/components/modules/*"],
+      "@model/*": ["src/models/*"],
+      "@lib/*": ["src/libs/*"],
+      "@assets/*": ["src/assets/*"],
+      "@config/*": ["src/configs/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

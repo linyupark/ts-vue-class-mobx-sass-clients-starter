@@ -1,0 +1,41 @@
+.toast {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+
+  .info {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    text-align: center;
+
+    .message {
+      max-width: 400px;
+      min-width: 200px;
+      display: inline-block;
+      background: rgba(#000, 0.75);
+      color: rgba(#fff, 0.8);
+      font-size: 28px;
+      border-radius: 10px;
+      user-select: none;
+      padding: 55px 30px;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+  }
+}
+
+// 过渡动画
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

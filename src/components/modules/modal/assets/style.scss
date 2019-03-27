@@ -1,0 +1,103 @@
+
+.modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 899;
+  background: rgba(#202020, 0.35);
+
+  .container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    left: 95px;
+    right: 95px;
+    z-index: 900;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+
+    // 提示特殊样式
+    &.alert {
+      .content {
+        text-align: center;
+      }
+
+      .btns {
+        background: #fff;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .wrapper {
+      padding: 58px 40px 36px 40px;
+
+      .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+
+      .content {
+        font-size: 28px;
+        line-height: 40px;
+        overflow: auto;
+      }
+    }
+
+    &.html {
+      top: 120px;
+      transform: none;
+      left: 30px;
+      right: 30px;
+
+      .content {
+        max-height: 65vh;
+      }
+    }
+
+    .btns {
+      border-top: 1Px solid #EBEBEB;
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      button {
+        font-size: 32px;
+        border: none;
+        display: block;
+        height: 86px;
+        width: 50%;
+        background: #fff;
+
+        &.cancel {
+          color: #999;
+        }
+
+        &.ok {
+          color: #3C93E4;
+        }
+
+        &:not(:last-child) {
+          border-right: 0.75Px solid #EBEBEB;
+        }
+      }
+    }
+  }
+}
+
+// 过渡动画
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

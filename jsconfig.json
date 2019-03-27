@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "experimentalDecorators": true,
+    "paths": {
+      "@page/*": ["src/components/pages/*"],
+      "@partial/*": ["src/components/partials/*"],
+      "@module/*": ["src/components/modules/*"],
+      "@model/*": ["src/models/*"],
+      "@lib/*": ["src/libs/*"],
+      "@assets/*": ["src/assets/*"],
+      "@config/*": ["src/configs/*"]
+    }
+  }
+}

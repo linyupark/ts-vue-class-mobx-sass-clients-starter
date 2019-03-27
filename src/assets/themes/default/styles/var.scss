@@ -1,0 +1,107 @@
+// 变量参考具体根据项目需求变化
+
+// 颜色相关
+//=============================
+// 字体对应位置
+$iconfont: '~@assets/themes/default/iconfont/iconfont.css';
+// 品牌 - 强调突出
+$brand-strong-color: #fb5b4c !default;
+// 主色、强调色、LINK
+$brand-primary-color: #3e86f7 !default;
+$brand-main-color: #{$brand-primary-color} !default;
+$brand-link-color: #{$brand-primary-color} !default;
+// 点击后
+$brand-primary-dark-color: #3778dd;
+$brand-main-dark-color: #{$brand-primary-dark-color} !default;
+$brand-linked-color: #{$brand-primary-dark-color} !default;
+// 字体色 - 深灰
+$font-dark-grey: #272727 !default;
+// 中灰
+$font-middle-grey: #595959 !default;
+// 浅灰
+$font-light-grey: #8c8c8c !default;
+// 失效 暗提示
+$font-disable-grey: #c7c7c7 !default;
+$font-tips-grey: #{$font-disable-grey} !default;
+// 界面 - 填充色
+$layout-fill-bg-color: #fafafa !default;
+// 背景色
+$layout-bg-color: #f5f5f5 !default;
+// 分割线
+$layout-hr-color: #{$layout-bg-color} !default;
+// 描边线
+$layout-border-color: #d9d9d9 !default;
+// 状态 - 提示
+$status-info-color: #4c98fc !default;
+$status-info-bg-color: #e3efff !default;
+// 成功
+$status-success-color: #3bc49d !default;
+$status-success-bg-color: #daf4ed !default;
+// 警告
+$status-warn-color: #ffb24c !default;
+$status-warn-bg-color: #fff1de !default;
+// 出错
+$status-error-color: #ff5e4c !default;
+$status-error-bg-color: #ffe3e0 !default;
+// 图标颜色集合
+$icon-color-1: #ff8000 !default;
+$icon-color-2: #f25c16 !default;
+$icon-color-3: #32a8d9 !default;
+$icon-color-4: #4c98fc !default;
+// 标签颜色
+$tag-color-1: #ff7e71 !default;
+$tag-color-2: #feae33 !default;
+$tag-color-3: #60bdfd !default;
+$tag-color-4: #d4b57f !default;
+// 按钮
+$btn-primary-color: #{$brand-primary-color} !default;
+// $btn-primary-active-color: #darken(#{$btn-primary-color}, 10%);
+$btn-primary-disable-color: grba(#{$btn-primary-color}, 0.4) !default;
+// 阴影
+$shadow-1: 0px 0px 8px 0px rgba(0, 0, 0, 0.1) !default;
+$shadow-2: 0px 8px 16px 0px rgba(0, 0, 0, 0.1) !default;
+$shadow-3: 0px 8px 32px 0px rgba(0, 0, 0, 0.1) !default;
+$shadow-4: 0px 8px 48px 0px rgba(0, 0, 0, 0.1) !default;
+// 遮罩
+$mask-page: rgba(0, 0, 0, 0.25) !default;
+$mask-toast: rgba(0, 0, 0, 0.75) !default;
+
+
+// 距离
+//=============================
+$page-wrapper: 30px !default;
+
+// mixin
+//=============================
+@mixin wrapper($length: $page-wrapper) { 
+  margin: 0 $length 20px;
+  width: calc(750px - #{$length} * 2);
+  overflow: hidden;
+}
+
+@mixin limitTextHeight($line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+// flex 居中
+@mixin flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 更多按钮样式封装(避免点击范围太小)
+@mixin moreBtn($h: 88px) {
+  color: $font-light-grey;
+  font-size: 28px;
+  font-weight: 400;
+  width: 80px;
+  height: $h;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
